@@ -79,8 +79,8 @@ def run():
         
         try:
             page.goto(target_url, timeout=60000)
-            page.locator('input[type="text"]').first.fill('sserjk')
-            page.locator('input[type="password"]').first.fill('sserjk')
+            page.locator('input[type="text"]').first.fill('sserg')
+            page.locator('input[type="password"]').first.fill('sserg')
             
             submit_btn = page.locator('button[type="submit"], input[type="submit"], button:has-text("Login"), button:has-text("Sign In")')
             if submit_btn.count() > 0:
@@ -96,8 +96,8 @@ def run():
                 start_time = time.time()
                 
                 if page.locator('input[type="password"]').is_visible():
-                    page.locator('input[type="text"]').first.fill('sserjk')
-                    page.locator('input[type="password"]').first.fill('sserjk')
+                    page.locator('input[type="text"]').first.fill('sserg')
+                    page.locator('input[type="password"]').first.fill('sserg')
                     page.keyboard.press('Enter')
                     page.wait_for_selector("text=Logout", timeout=60000)
                     time.sleep(3)
@@ -116,7 +116,7 @@ def run():
                 
                 push_to_github(file_path)
                 
-                caption = f"📊 RJK Device List\n📅 Date: {date_folder}\n⏰ Time: {now_ist.strftime('%I:%M:%S %p')}"
+                caption = f"📊 RG Device List\n📅 Date: {date_folder}\n⏰ Time: {now_ist.strftime('%I:%M:%S %p')}"
                 send_to_telegram(file_path, caption)
                 
                 count += 1
