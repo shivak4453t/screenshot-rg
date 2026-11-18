@@ -6,7 +6,7 @@ from datetime import datetime, timezone, timedelta
 from playwright.sync_api import sync_playwright
 
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "YOUR_BOT_TOKEN")
-TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "971307814")
+TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "8344005246")
 
 IST = timezone(timedelta(hours=5, minutes=30))
 
